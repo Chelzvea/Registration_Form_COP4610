@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,126 +7,246 @@
     tools:context=".MainActivity">
 
     <!-- PET CARE HEADER -->
-    <TextView
-        android:id="@+id/petCareHeader"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Pet Care"
-        android:textColor="#FFFFFF"
-        android:background="#800080"
-        android:textSize="24sp"
-        android:gravity="left"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-
-
-    <!--TITLE -->
 <TextView
-    android:id="@+id/petCareID2"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Pet care"
-    />
-    <TextView
-        android:id="@+id/TextTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pet Registration Form"
-        android:gravity="center"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/petCareHeader" />
+android:id="@+id/petCareHeader"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:text="Pet Care"
+android:textColor="#FFFFFF"
+android:background="#0D0080"
+android:textSize="24sp"
+android:gravity="left"
+app:layout_constraintTop_toBottomOf="@id/TextTitle"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- PET CARE TITLE -->
+<TextView
+android:id="@+id/PetCareTitle"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="PetCare"
+app:layout_constraintTop_toBottomOf="@id/petCareHeader"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TITLE -->
+<TextView
+android:id="@+id/TextTitle"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Pet Registration Form"
+android:textSize="20sp"
+app:layout_constraintTop_toBottomOf="@id/PetCareTitle"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Horizontal Guideline -->
+<androidx.constraintlayout.widget.Guideline
+android:id="@+id/guideline"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+app:layout_constraintGuide_percent="0.5" />
 
     <!-- Microchip ID -->
-    <TextView
-        android:id="@+id/TextMicrochipID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:text="Microchip ID"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/petCareHeader" />
+<TextView
+android:id="@+id/TextMicrochipID"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+    android:text="Microchip ID"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/petCareHeader" />
+
     <EditText
         android:id="@+id/EditMicrochipID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_weight="1"
+        android:hint="Enter microchip ID"
         android:inputType="text"
-        android:hint="Enter microchip ID "
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/TextMicrochipID"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/TextMicrochipID" />
 
     <!-- NAME -->
-    <TextView
-        android:id="@+id/TextName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:text="Name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextMicrochipID" />\
+<TextView
+android:id="@+id/TextName"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+    android:text="Name"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/EditMicrochipID" />
 
-
-    <!-- GENDER -->
-    <TextView
-        android:id="@+id/TextGender"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/EditName"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:hint="Enter name"
+        android:inputType="text"
         android:minHeight="48dp"
-        android:text="Gender"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/TextName" />
 
-    <!-- EMAIL -->
-    <TextView
-        android:id="@+id/TextEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:text="Email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextGender" />
+    <!-- GENDER -->
+<TextView
+android:id="@+id/TextGender"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+    android:text="Gender"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/EditName" />
 
-    <!-- ACCESS CODE -->
-    <TextView
-        android:id="@+id/TextAccessCode"
+    <RadioGroup
+    android:id="@+id/GenderRadioGroup"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintStart_toEndOf="@id/guideline"
+    app:layout_constraintTop_toBottomOf="@+id/TextGender">
+
+    <RadioButton
+        android:id="@+id/RadioMale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Male" />
+
+    <RadioButton
+        android:id="@+id/RadioFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female" />
+</RadioGroup>
+
+    <!-- EMAIL -->
+<TextView
+android:id="@+id/TextEmail"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:text="Email"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/GenderRadioGroup" />
+
+    <EditText
+        android:id="@+id/EditEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Enter email"
+        android:inputType="text"
         android:minHeight="48dp"
-        android:text="Access Code"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/TextEmail" />
 
-    <!-- CONFIRM CODE -->
-    <TextView
-        android:id="@+id/textConfirmCode"
-        android:layout_width="wrap_content"
+    <!-- ACCESS CODE -->
+<TextView
+android:id="@+id/TextAccessCode"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:text="Access Code"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/EditEmail" />
+
+    <EditText
+        android:id="@+id/EditAccessCode"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Enter access code"
+        android:inputType="text"
         android:minHeight="48dp"
-        android:text="Confirm Access Code"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/TextAccessCode" />
 
-    <!-- Buttons -->
-    <Button
-        android:id="@+id/reset_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Reset"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/Submit_button"
-        app:layout_constraintStart_toStartOf="parent" />
+    <!-- CONFIRM CODE -->
+<TextView
+android:id="@+id/textConfirmCode"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:text="Confirm Access Code"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/EditAccessCode" />
 
-    <Button
-        android:id="@+id/Submit_button"
+    <EditText
+        android:id="@+id/editConfirmCode"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        android:hint="Confirm access code"
+        android:inputType="text"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/reset_button" />
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textConfirmCode" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- BREED -->
+<TextView
+android:id="@+id/TextBreed"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:text="Breed"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/editConfirmCode" />
+
+    <EditText
+        android:id="@+id/editBreed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Enter breed"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/TextBreed" />
+
+    <!-- Neutered -->
+<TextView
+android:id="@+id/TextNeutered"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:text="Neutered"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/editBreed" />
+
+    <EditText
+        android:id="@+id/editNeutered"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Enter neutered status"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/TextNeutered" />
+
+    <!-- Buttons -->
+<Button
+android:id="@+id/reset_button"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:text="Reset"
+android:layout_marginTop="16dp"
+app:layout_constraintTop_toBottomOf="@+id/editNeutered"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toStartOf="@id/Submit_button"
+app:layout_constraintStart_toStartOf="parent" />
+
+<Button
+android:id="@+id/Submit_button"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:text="Submit"
+android:layout_marginTop="16dp"
+app:layout_constraintTop_toBottomOf="@+id/editNeutered"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toEndOf="@id/reset_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
