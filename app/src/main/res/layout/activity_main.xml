@@ -16,7 +16,7 @@ android:textColor="#FFFFFF"
 android:background="#0D0080"
 android:textSize="24sp"
 android:gravity="left"
-app:layout_constraintTop_toBottomOf="@id/TextTitle"
+app:layout_constraintTop_toTopOf="parent"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintEnd_toEndOf="parent" />
 
@@ -54,8 +54,9 @@ android:id="@+id/TextMicrochipID"
 android:layout_width="0dp"
 android:layout_height="wrap_content"
     android:text="Microchip ID"
+    android:textSize="20sp"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/petCareHeader" />
+    app:layout_constraintTop_toBottomOf="@id/TextTitle" />
 
     <EditText
         android:id="@+id/EditMicrochipID"
@@ -66,9 +67,9 @@ android:layout_height="wrap_content"
         android:hint="Enter microchip ID"
         android:inputType="text"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/TextMicrochipID" />
+        app:layout_constraintStart_toEndOf="@+id/TextMicrochipID"
+        app:layout_constraintTop_toTopOf="@+id/TextMicrochipID"
+        app:layout_constraintBottom_toBottomOf="@+id/TextMicrochipID" />
 
     <!-- NAME -->
 <TextView
@@ -76,6 +77,7 @@ android:id="@+id/TextName"
 android:layout_width="0dp"
 android:layout_height="wrap_content"
     android:text="Name"
+    android:textSize="20sp"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/EditMicrochipID" />
 
@@ -88,9 +90,9 @@ android:layout_height="wrap_content"
         android:hint="Enter name"
         android:inputType="text"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/TextName" />
+        app:layout_constraintStart_toEndOf="@+id/TextName"
+        app:layout_constraintTop_toTopOf="@+id/TextName"
+        app:layout_constraintBottom_toBottomOf="@+id/TextName"/>
 
     <!-- GENDER -->
 <TextView
@@ -98,6 +100,7 @@ android:id="@+id/TextGender"
 android:layout_width="0dp"
 android:layout_height="wrap_content"
     android:text="Gender"
+    android:textSize="20sp"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/EditName" />
 
@@ -106,8 +109,9 @@ android:layout_height="wrap_content"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    app:layout_constraintStart_toEndOf="@id/guideline"
-    app:layout_constraintTop_toBottomOf="@+id/TextGender">
+        app:layout_constraintStart_toEndOf="@+id/TextGender"
+        app:layout_constraintTop_toTopOf="@+id/TextGender"
+        app:layout_constraintBottom_toBottomOf="@+id/TextGender">
 
     <RadioButton
         android:id="@+id/RadioMale"
@@ -128,6 +132,7 @@ android:id="@+id/TextEmail"
 android:layout_width="0dp"
 android:layout_height="wrap_content"
 android:text="Email"
+    android:textSize="20sp"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toBottomOf="@+id/GenderRadioGroup" />
 
@@ -139,9 +144,9 @@ app:layout_constraintTop_toBottomOf="@+id/GenderRadioGroup" />
         android:hint="Enter email"
         android:inputType="text"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/TextEmail" />
+        app:layout_constraintStart_toEndOf="@+id/TextEmail"
+        app:layout_constraintTop_toTopOf="@+id/TextEmail"
+        app:layout_constraintBottom_toBottomOf="@+id/TextEmail" />
 
     <!-- ACCESS CODE -->
 <TextView
@@ -149,6 +154,7 @@ android:id="@+id/TextAccessCode"
 android:layout_width="0dp"
 android:layout_height="wrap_content"
 android:text="Access Code"
+    android:textSize="20sp"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toBottomOf="@+id/EditEmail" />
 
@@ -160,9 +166,9 @@ app:layout_constraintTop_toBottomOf="@+id/EditEmail" />
         android:hint="Enter access code"
         android:inputType="text"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/TextAccessCode" />
+        app:layout_constraintStart_toEndOf="@+id/TextAccessCode"
+        app:layout_constraintTop_toTopOf="@+id/TextAccessCode"
+        app:layout_constraintBottom_toBottomOf="@+id/TextAccessCode" />
 
     <!-- CONFIRM CODE -->
 <TextView
@@ -170,6 +176,7 @@ android:id="@+id/textConfirmCode"
 android:layout_width="0dp"
 android:layout_height="wrap_content"
 android:text="Confirm Access Code"
+    android:textSize="20sp"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toBottomOf="@+id/EditAccessCode" />
 
@@ -181,9 +188,9 @@ app:layout_constraintTop_toBottomOf="@+id/EditAccessCode" />
         android:hint="Confirm access code"
         android:inputType="text"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/textConfirmCode" />
+        app:layout_constraintStart_toEndOf="@+id/textConfirmCode"
+        app:layout_constraintTop_toTopOf="@+id/textConfirmCode"
+        app:layout_constraintBottom_toBottomOf="@+id/textConfirmCode" />
 
     <!-- BREED -->
 <TextView
@@ -191,6 +198,7 @@ android:id="@+id/TextBreed"
 android:layout_width="0dp"
 android:layout_height="wrap_content"
 android:text="Breed"
+    android:textSize="20sp"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toBottomOf="@+id/editConfirmCode" />
 
@@ -202,9 +210,9 @@ app:layout_constraintTop_toBottomOf="@+id/editConfirmCode" />
         android:hint="Enter breed"
         android:inputType="text"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/TextBreed" />
+        app:layout_constraintStart_toEndOf="@+id/TextBreed"
+        app:layout_constraintTop_toTopOf="@+id/TextBreed"
+        app:layout_constraintBottom_toBottomOf="@+id/TextBreed" />
 
     <!-- Neutered -->
 <TextView
@@ -212,20 +220,19 @@ android:id="@+id/TextNeutered"
 android:layout_width="0dp"
 android:layout_height="wrap_content"
 android:text="Neutered"
+    android:textSize="20sp"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toBottomOf="@+id/editBreed" />
 
-    <EditText
-        android:id="@+id/editNeutered"
-        android:layout_width="0dp"
+    <CheckBox
+        android:id="@+id/CheckNeutered"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="Enter neutered status"
-        android:inputType="text"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/TextNeutered" />
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/TextNeutered"
+        app:layout_constraintTop_toTopOf="@+id/TextNeutered"
+        app:layout_constraintBottom_toBottomOf="@+id/TextNeutered"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Buttons -->
 <Button
@@ -233,6 +240,7 @@ android:id="@+id/reset_button"
 android:layout_width="0dp"
 android:layout_height="wrap_content"
 android:text="Reset"
+    android:textSize="20sp"
 android:layout_marginTop="16dp"
 app:layout_constraintTop_toBottomOf="@+id/editNeutered"
 app:layout_constraintBottom_toBottomOf="parent"
